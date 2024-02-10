@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardProfileComponent } from './card-profile.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('CardProfileComponent', () => {
   let component: CardProfileComponent;
@@ -8,6 +9,7 @@ describe('CardProfileComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [CardProfileComponent]
     });
     fixture = TestBed.createComponent(CardProfileComponent);

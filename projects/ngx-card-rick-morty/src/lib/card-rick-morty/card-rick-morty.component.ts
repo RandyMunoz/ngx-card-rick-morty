@@ -11,6 +11,8 @@ export class CardRickMortyComponent {
 
   @Input() character!: Character;
 
+  @Input() colorStatus: string = '';
+
   @Output() idFav: EventEmitter<number> = new EventEmitter<number>();
 
   isVisible: boolean = false;
