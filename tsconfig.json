@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ngx-card-rick-morty": [
+        //"dist/ngx-card-rick-morty"
+        "projects/ngx-card-rick-morty/src/public-api.ts"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,

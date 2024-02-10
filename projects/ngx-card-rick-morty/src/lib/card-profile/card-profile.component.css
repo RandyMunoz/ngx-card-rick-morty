@@ -1,0 +1,31 @@
+.card-profile ::ng-deep .p-card {
+  box-shadow: none;
+  border: 1px solid #BDBDBD;
+  padding: .6rem;
+  width: 10rem;
+}
+
+.card-profile .section-detail-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-profile .section-detail-content div {
+  flex: 1 1 0%;
+}
+
+.card-profile .section-detail-content i {
+  color: #828282;
+  font-size: 10px;
+  margin-right: 4px;
+}
+
+.card-profile .section-detail-content span {
+  color: #828282;
+  font-size: 11px;
+}
+
+.card-profile .section-detail-content .value {
+  font-size: 17px;
+  font-weight: 600;
+}

@@ -1,0 +1,151 @@
+<card-summary
+  [image]="character.image"
+  [id]="character.id"
+  [colorStatus]="
+    character.status.toLowerCase() == 'alive' ? 'rgb(85, 204, 68)' : '#F2994A'
+  "
+  [status]="character.status"
+  [species]="character.species"
+  [name]="character.name"
+  [locationName]="character.location.name"
+  [episode]="character.episode[0].name"
+  [isFavorite]="character.favorite"
+  (idFav)="addOrRemoveFavorite($event)"
+  (showModalProfile)="showModal()"
+></card-summary>
+<p-dialog
+  [(visible)]="isVisible"
+  [modal]="true"
+  [style]="{ width: '740px' }"
+  [draggable]="false"
+  [resizable]="false"
+  [closable]="false"
+>
+  <ng-template pTemplate="header">
+    <div class="container-header">
+      <div class="section-header bg-img">
+        <img
+          ngSrc="{{ bgProfile }}"
+          alt="fondo"
+          width="740"
+          height="220"
+          loading="lazy"
+        />
+        <div class="bg"></div>
+        <button (click)="isVisible = false">
+          <i class="pi pi-times"></i>
+        </button>
+      </div>
+      <div class="section-header bg-photo">
+        <div class="photo">
+          <img
+            ngSrc="{{ character.image }}"
+            alt="profile"
+            width="155"
+            height="155"
+            loading="lazy"
+          />
+        </div>
+        <div class="favorite">
+          <button class="btn-fav" (click)="addOrRemoveFavorite(character.id)">
+            <i class="pi pi-star-fill" [ngClass]="character.favorite ? 'fav' : ''"></i>
+          </button>
+        </div>
+        <div class="sub">
+          <span>{{ character.status | uppercase }}</span>
+        </div>
+        <div class="name">
+          <span>{{ character.name }}</span>
+        </div>
+        <div class="sub">
+          <span>{{ character.species | uppercase }}</span>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="content">
+    <div class="container-content">
+      <div class="section-content">
+        <h1>Informacion</h1>
+        <div class="detail-information">
+          <card-profile
+            [icon]="true"
+            [title]="'Gender:'"
+            [value]="character.gender"
+          ></card-profile>
+          <card-profile
+            [icon]="true"
+            [title]="'Origin:'"
+            [value]="character.origin.name"
+          ></card-profile>
+          <card-profile
+            [icon]="true"
+            [title]="'Type:'"
+            [value]="character.type != '' ? character.type : 'Unknown'"
+          ></card-profile>
+        </div>
+      </div>
+      <p-divider type="solid"></p-divider>
+      <div class="section-content">
+        <h1>Episodios</h1>
+        <div class="detail-episode">
+          <ng-container *ngFor="let e of character.episode">
+            <card-profile
+              [title]="e.name"
+              [value]="e.episode"
+              [date]="e.air_date"
+            ></card-profile>
+          </ng-container>
+        </div>
+      </div>
+      <p-divider type="solid"></p-divider>
+      <div class="section-content">
+        <h1>Personajes interesantes</h1>
+        <div class="detail-character">
+          <card-summary
+            [image]="character.image"
+            [id]="character.id"
+            [colorStatus]="
+              character.status.toLowerCase() == 'alive'
+                ? 'rgb(85, 204, 68)'
+                : '#F2994A'
+            "
+            [status]="character.status"
+            [species]="character.species"
+            [name]="character.name"
+            [locationName]="character.location.name"
+            [episode]="character.episode[0].name"
+            [isFavorite]="character.favorite"
+            (idFav)="addOrRemoveFavorite($event)"
+          ></card-summary>
+          <card-summary
+            [image]="character.image"
+            [id]="character.id"
+            [colorStatus]="
+              character.status.toLowerCase() == 'alive'
+                ? 'rgb(85, 204, 68)'
+                : '#F2994A'
+            "
+            [status]="character.status"
+            [species]="character.species"
+            [name]="character.name"
+            [locationName]="character.location.name"
+            [episode]="character.episode[0].name"
+            [isFavorite]="character.favorite"
+            (idFav)="addOrRemoveFavorite($event)"
+          ></card-summary>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <div class="container-footer">
+      <p-button
+        class="button"
+        label="Compartir personaje"
+        [rounded]="true"
+        size="small"
+      ></p-button>
+    </div>
+  </ng-template>
+</p-dialog>
