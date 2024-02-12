@@ -103,11 +103,7 @@
           <card-summary
             [image]="character.image"
             [id]="character.id"
-            [colorStatus]="
-              character.status.toLowerCase() == 'alive'
-                ? 'rgb(85, 204, 68)'
-                : '#F2994A'
-            "
+            [colorStatus]="colorStatus"
             [status]="character.status"
             [species]="character.species"
             [name]="character.name"
@@ -119,11 +115,7 @@
           <card-summary
             [image]="character.image"
             [id]="character.id"
-            [colorStatus]="
-              character.status.toLowerCase() == 'alive'
-                ? 'rgb(85, 204, 68)'
-                : '#F2994A'
-            "
+            [colorStatus]="colorStatus"
             [status]="character.status"
             [species]="character.species"
             [name]="character.name"
