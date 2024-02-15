@@ -1,27 +1,27 @@
 # NgxCardRickMorty
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+Esta es una libreria de presentacion de una card con primeng que muestra de manera resumida la informacion del personaje.
+La aplicacion esta realizada con Angular V16 y PrimeNG V16
 
-## Development server
+## URL de libreria en NPM
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[NgxCardRickMorty](https://www.npmjs.com/package/ngx-card-rick-morty)
 
-## Code scaffolding
+## Clonar proyecto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+git clone https://github.com/RandyMunoz/ngx-card-rick-morty.git
 
-## Build
+## Bajar dependencias
+Ejecutar comando `npm i`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Ejecucion de la libreria en local
 
-## Running unit tests
+Correr el comando `ng serve -o` (ya existe un proyecto interno llamado demo).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Ejecucion de pruebas unitarias
 
-## Running end-to-end tests
+Ejecutar comando `ng test`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+> [!NOTE]
+> Se agradece si dejas tu :star:
